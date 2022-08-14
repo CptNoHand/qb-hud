@@ -1,16 +1,12 @@
 Config = {}
 
-Config.OpenMenu = 'I' -- https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+Config.OpenMenu = 'J' -- https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
 Config.StressChance = 0.1 -- Default: 10% -- Percentage Stress Chance When Shooting (0-1)
-Config.UseMPH = true -- If true speed math will be done as MPH, if false KPH will be used (YOU HAVE TO CHANGE CONTENT IN STYLES.CSS TO DISPLAY THE CORRECT TEXT)
+Config.UseMPH = false -- If true speed math will be done as MPH, if false KPH will be used (YOU HAVE TO CHANGE CONTENT IN STYLES.CSS TO DISPLAY THE CORRECT TEXT)
 Config.MinimumStress = 50 -- Minimum Stress Level For Screen Shaking
-Config.MinimumSpeedUnbuckled = 50 -- Going Over This Speed Will Cause Stress
-Config.MinimumSpeed = 100 -- Going Over This Speed Will Cause Stress
-Config.DisablePoliceStress = false -- Default: false, If true will disable stress for people with the police job
-Config.FuelScript = 'LegacyFuel' -- change to lj-fuel if you use lj-fuel or something else if you use any other LegcyFuel compatible script
-
--- Admin only to change hud icons/shapes
-Config.AdminOnly = false
+Config.MinimumSpeedUnbuckled = 270 -- Going Over This Speed Will Cause Stress
+Config.MinimumSpeed = 300 -- Going Over This Speed Will Cause Stress
+Config.DisablePoliceStress = true -- If true will disable stress for people with the police job
 
 -- Stress
 Config.WhitelistedWeaponArmed = { -- weapons specifically whitelisted to not show armed mode
@@ -116,4 +112,34 @@ Config.EffectInterval = {
         max = 100,
         timeout = math.random(15000, 20000)
     }
+}
+
+Config.Menu = {
+    isOutMapChecked = false, -- isOutMapChecked
+    isOutCompassChecked = false, -- isOutMapChecked
+    isCompassFollowChecked = true, -- isCompassFollowChecked
+    isOpenMenuSoundsChecked = true, -- isOpenMenuSoundsChecked
+    isResetSoundsChecked = true, -- isResetSoundsChecked
+    isListSoundsChecked = true, -- isListSoundsChecked
+    isMapNotifChecked = true, -- isMapNotifChecked
+    isLowFuelChecked = true, -- isLowFuelChecked
+    isCinematicNotifChecked = true, -- isCinematicNotifChecked
+    isDynamicHealthChecked = true, -- isDynamicHealthChecked
+    isDynamicArmorChecked= true, -- isDynamicArmorChecked
+    isDynamicHungerChecked = true, -- isDynamicHungerChecked
+    isDynamicThirstChecked = true, -- isDynamicThirstChecked
+    isDynamicStressChecked = true, -- isDynamicStressChecked
+    isDynamicOxygenChecked = true, -- isDynamicOxygenChecked
+    isChangeFPSChecked = true, -- isChangeFPSChecked
+    isHideMapChecked = false, -- isHideMapChecked
+    isToggleMapBordersChecked = true, -- isToggleMapBordersChecked
+    isDynamicEngineChecked = true, -- isDynamicEngineChecked
+    isDynamicNitroChecked = true, -- isDynamicNitroChecked
+    isChangeCompassFPSChecked = true, -- isChangeCompassFPSChecked
+    isCompassShowChecked = true, -- isShowCompassChecked
+    isShowStreetsChecked = true, -- isShowStreetsChecked
+    isPointerShowChecked = true, -- isPointerShowChecked
+    isDegreesShowChecked = true, -- isDegreesShowChecked
+    isCineamticModeChecked = false, -- isCineamticModeChecked
+    isToggleMapShapeChecked = 'square', -- isToggleMapShapeChecked
 }
