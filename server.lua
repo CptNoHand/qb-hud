@@ -62,8 +62,8 @@ RegisterNetEvent('hud:server:RelieveStress', function(amount)
 end)
 
 QBCore.Functions.CreateCallback('hud:server:HasHarness', function(source, cb)
-    local Ply = QBCore.Functions.GetPlayer(source)
-    local Harness = Ply.Functions.GetItemByName("harness")
+    local Player = QBCore.Functions.GetPlayer(source)
+    local Harness = Player.Functions.GetItemByName("harness")
     if Harness ~= nil then
         cb(true)
     else
