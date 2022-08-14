@@ -1,60 +1,88 @@
+![Project Sloth GitHub Project PS-HUD Banner](https://user-images.githubusercontent.com/91661118/170896135-fead50a0-2a4b-432d-8469-038acfb4f2f3.png)
 
-# Things you should know:
-* To open the menu in-game the **default key** is **"I"** or you can type **"/menu"**
-* Your settings will **always** be **stored locally**, so even if you delete the resource it **will** keep your current settings. The **only** way you can wipe the local storage sucessfully is by clicking the **"Reset Settings"** button on the in-game menu
-* If you want the new super snazzy sound effects for the menu, you'll need to download the latest update of [interact-sound](https://github.com/qbcore-framework/interact-sound) <br>
-(comes with new open menu sound, close menu sound, click menu sound)
-* If you receive ```attempt to index a nil value (global 'Lang')``` in your F8 console, the fastest way you can fix that issue is by downloading a new version via txAdminRecipe but if you are unable to do that because of the progress you’ve made on your existing build; you’ll have to unfortunately go through and download each one from the GitHub which I do not recommend. Save yourself a lot of time and pain by just downloading the recipe!
+### ps-hud
+Ultra customizable hud featuring a unique and robust settings menu. Change eveything about your experience!
 
-# FAQ
-##
-**Q:** Why do my borders not align with the maps?
+![Project Sloth Buttons 2](https://user-images.githubusercontent.com/91661118/170895968-c4224105-5c87-4947-af94-8e8bd792f566.png)
 
-**A:** Most of the time it generally means your safezone is not set to default in your GTA settings. (Settings/Display/"Restore Defaults")
-##
+### Optional:
+* [ps-buffs](https://github.com/Project-Sloth/ps-buffs)
 
-##
-**Q:** How do I enable dev mode?
+### ⚠️Important:
+- **If the minimap is pulsating or flickering, make sure if you are using custom maps that you ensure ps-hud BEFORE map resource.**
+- **Do not rename this resource from ps-hud or you will encounter issues.**
+- Locale is now supported. Make sure that your qb-core is update. You can update it [here](https://github.com/qbcore-framework/qb-core).
+- **This script is fully open source, it has no obfuscation.** Svelte compiled the js when it gets build and original source code is here [svelte-source](https://github.com/Project-Sloth/ps-hud/tree/main/svelte-source).
 
-**A:** Simple! All you have to do is type /admin and navigate through the menu to the last section called "Developer Options" and inside there you should see "Dev Mode", this will keep you invincible and add a cool developer icon in your circles/radials 
-##
+<br>
+<br>
 
-##
-**Q:** What does the purple circle/radial do?
+![Project Sloth GitHub Project PS-HUD Install Banner](https://user-images.githubusercontent.com/91661118/170896809-5c15da71-5dd7-4f46-85c5-892701b1eea8.png)
 
-**A:** That is your harness indicator! When you have the item "harness" in your inventory and while in a vehicle it will appear. Also, when you use your item "harness", the circle/radial will reflect the amount of uses left and decrease overtime.
-##
 
-# Previews
-### menu config (this is just a preview more options included than what is shown here)
-![menu](https://user-images.githubusercontent.com/91661118/149598723-b34bb93d-8885-4b3a-a0cc-ab68d756a449.PNG)
-### all radials
-![all radials](https://user-images.githubusercontent.com/91661118/143668930-e9475c53-284c-4054-ad9c-88aa98f76768.png)
-### dead health
-![dead](https://user-images.githubusercontent.com/91661118/143668617-3f41913f-506e-4c40-bc97-99c0e02eaec6.png)
-### engine health
-![engine](https://user-images.githubusercontent.com/91661118/143668642-22269059-8220-4b78-8f24-3c3661b7e82f.png)
-### altitude
-![altitude](https://user-images.githubusercontent.com/91661118/143668687-89ae10b6-9acc-4d68-845d-97db67d3d6de.png)
-### parachute
-![parachute](https://user-images.githubusercontent.com/91661118/143668699-a9d50ee4-1168-401b-bf92-8ba80a696e6e.png)
-### armed
-![armed](https://user-images.githubusercontent.com/91661118/143668646-baac9848-56e5-436b-922a-b35e50ed335f.png)
-### cinematic
-![cinematic](https://user-images.githubusercontent.com/91661118/143668651-74e90ac0-11ad-447a-b27c-1542dd10edfd.png)
-### cruise
-![cruise](https://user-images.githubusercontent.com/91661118/143668654-1b843009-c791-4482-807d-352b75707d42.png)
-### harness
-![harness](https://user-images.githubusercontent.com/91661118/143668664-bd03289a-286f-4165-9447-25b16b5b0c8e.png)
-### cash
-![cash](https://user-images.githubusercontent.com/91661118/143668667-a8e2e856-94be-45c4-9751-39e71315b303.png)
-### bank
-![bank](https://user-images.githubusercontent.com/91661118/143668668-fed140e6-9043-4daa-8aba-36feac3f9b78.png)
-### nitro
-![nitro](https://user-images.githubusercontent.com/91661118/143668672-8a164eb0-aca5-4e00-a99f-56c64e4d5069.png)
-### stamina
-![stamina](https://user-images.githubusercontent.com/91661118/143668678-3327c0bf-7e3b-4fe5-b6e5-da6e4054a47a.png)
-### oxygen
-![oxygen](https://user-images.githubusercontent.com/91661118/143668693-d623822b-fc78-499a-baa3-a86e29504044.png)
-### radio (outdated color)
-![radio](https://user-images.githubusercontent.com/91661118/143668707-eb4bb5e7-5900-4dd8-b500-5fc745a7c146.png)
+### Start installing now
+We will now provide you with a step-by-step guide for the installation process. Shouldn't take too long and it shouldn't be too confusing either! 
+
+
+### Step 1:
+Go ahead and start by dragging and dropping ps-hud into your designated resources folder.
+
+If you are still lost, Slothy has created a few GIF's to help guide you through all the installation steps.
+
+![chrome_KpjdUnvhgV](https://user-images.githubusercontent.com/91661118/170898348-4d50573f-fd8e-447e-add1-9562a196c7ed.gif)
+
+<br>
+<br>
+
+### Admin Only Setting:
+If you don't want your community to be able to access the customizability options within the menu; make sure to change **Config.AdminOnly** to **true** instead of **false**. Keep in mind as well, while **true**, the changes you save will override for everyone on the server.
+
+This configuration setting is found in **ps-hud/config.lua** as shown in the GIF below.
+
+![chrome_ZwsidhP73y](https://user-images.githubusercontent.com/91661118/171066080-6bc11bb8-7cde-460b-8d73-bbc329644c83.gif)
+
+<br>
+<br>
+
+![Project Sloth GitHub Project PS-HUD Features Banner](https://user-images.githubusercontent.com/91661118/170896822-4c6fcf43-94a3-4afd-b651-1eb76244fd8d.png)
+
+
+#### Some features to mention within this ps-hud:
+* Custom icon shapes
+* Alter icon size, position and color
+* Customize settings for individual icons
+* Endless options for icon position and orientation
+<br>
+<br>
+
+![Project Sloth GitHub Project PS-HUD Showcase Banner](https://user-images.githubusercontent.com/91661118/170896830-39245350-47c3-4b42-93d0-ac0ca35c3711.png)
+
+
+### Time to show you what it looks like!
+Here's a few showcased examples while using ps-hud.
+
+#### Design mode and shapes:
+https://user-images.githubusercontent.com/89323760/170896585-3f4a7e47-7589-4b55-98a2-0fedb81b4e15.mp4
+
+#### Icon state and color:
+https://user-images.githubusercontent.com/89323760/170898487-f86c7495-8fe2-4bcc-a539-c44e22f40c4b.mp4
+
+#### Icon size and position:
+https://user-images.githubusercontent.com/89323760/170896588-78bd864d-f88a-44a0-82cd-f654a35d89db.mp4
+
+#### Change progress color:
+https://user-images.githubusercontent.com/89323760/170896589-e23f95cc-875a-4bb2-8673-39a36234f7bb.mp4
+
+#### Individually edit icons:
+https://user-images.githubusercontent.com/89323760/170896590-0a9af313-19c3-4981-b9c5-a9b682a465f3.mp4
+
+#### Icon layout and spacing:
+https://user-images.githubusercontent.com/89323760/170898540-5e3abd16-38bb-45d6-840e-5a2619c2076b.mp4
+
+# DMCA Protection Certificate
+![image](https://user-images.githubusercontent.com/82112471/172012054-2ae213da-3a42-41d7-a5b8-9a3208809e93.png)
+
+### Credits:
+Inspiration and some code snippets from [Svelte & Lua Boilerplate](https://github.com/project-error/svelte-lua-boilerplate) by [Project Error](https://github.com/project-error)
+
+##### Copyright © 2022 Project Sloth.
