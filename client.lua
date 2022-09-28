@@ -671,7 +671,7 @@ local function getFuelLevel(vehicle)
     local updateTick = GetGameTimer()
     if (updateTick - lastFuelUpdate) > 2000 then
         lastFuelUpdate = updateTick
-        lastFuelCheck = math.floor(exports['LegacyFuel']:GetFuel(vehicle))
+        lastFuelCheck = math.floor(exports['cdn-fuel']:GetFuel(vehicle))
     end
     return lastFuelCheck
 end
@@ -839,7 +839,7 @@ CreateThread(function()
         if LocalPlayer.state.isLoggedIn then
             local ped = PlayerPedId()
             if IsPedInAnyVehicle(ped, false) and not IsThisModelABicycle(GetEntityModel(GetVehiclePedIsIn(ped, false))) then
-                if exports['LegacyFuel']:GetFuel(GetVehiclePedIsIn(ped, false)) <= 20 then -- At 20% Fuel Left
+                if exports['cdn-fuel']:GetFuel(GetVehiclePedIsIn(ped, false)) <= 20 then -- At 20% Fuel Left
                     if Menu.isLowFuelChecked then
                         TriggerServerEvent("InteractSound_SV:PlayOnSource", "pager", 0.10)
                         QBCore.Functions.Notify(Lang:t("notify.low_fuel"), "error")
@@ -903,21 +903,14 @@ CreateThread(function() -- Speeding
         if LocalPlayer.state.isLoggedIn then
             local ped = PlayerPedId()
             if IsPedInAnyVehicle(ped, false) then
-                local veh = GetVehiclePedIsIn(ped, false)
-                local vehClass = GetVehicleClass(veh)
-                local speed = GetEntitySpeed(veh) * speedMultiplier
-
-                if vehClass ~= 13 and vehClass ~= 14 and vehClass ~= 15 and vehClass ~= 16 and vehClass ~= 21 then
-                    local stressSpeed
-                    if vehClass == 8 then
-                        stressSpeed = config.MinimumSpeed
-                    else
-                        stressSpeed = seatbeltOn and config.MinimumSpeed or config.MinimumSpeedUnbuckled
-                    end
+                local class = GetVehicleClass(GetVehiclePedIsIn(ped, false))            --Change Add
+                if class ~= 8 and class ~= 13 and class ~= 15 and class ~= 16 then      --Change Add
+                    local speed = GetEntitySpeed(GetVehiclePedIsIn(ped, false)) * speedMultiplier
+                    local stressSpeed = seatbeltOn and config.MinimumSpeed or config.MinimumSpeedUnbuckled
                     if speed >= stressSpeed then
                         TriggerServerEvent('hud:server:GainStress', math.random(1, 3))
                     end
-                end
+                end                                                                     --Change Add
             end
         end
         Wait(10000)
