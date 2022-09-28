@@ -1,7 +1,7 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local PlayerData = QBCore.Functions.GetPlayerData()
 local config = Config
-local speedMultiplier = 3.6
+local speedMultiplier = config.UseMPH and 2.23694 or 3.6
 local seatbeltOn = false
 local cruiseOn = false
 local showAltitude = false
@@ -903,14 +903,21 @@ CreateThread(function() -- Speeding
         if LocalPlayer.state.isLoggedIn then
             local ped = PlayerPedId()
             if IsPedInAnyVehicle(ped, false) then
-                local class = GetVehicleClass(GetVehiclePedIsIn(ped, false))            --Change Add
-                if class ~= 8 and class ~= 13 and class ~= 15 and class ~= 16 then      --Change Add
-                    local speed = GetEntitySpeed(GetVehiclePedIsIn(ped, false)) * speedMultiplier
-                    local stressSpeed = seatbeltOn and config.MinimumSpeed or config.MinimumSpeedUnbuckled
+                local veh = GetVehiclePedIsIn(ped, false)
+                local vehClass = GetVehicleClass(veh)
+                local speed = GetEntitySpeed(veh) * speedMultiplier
+
+                if vehClass ~= 13 and vehClass ~= 14 and vehClass ~= 15 and vehClass ~= 16 and vehClass ~= 21 then
+                    local stressSpeed
+                    if vehClass == 8 then
+                        stressSpeed = config.MinimumSpeed
+                    else
+                        stressSpeed = seatbeltOn and config.MinimumSpeed or config.MinimumSpeedUnbuckled
+                    end
                     if speed >= stressSpeed then
                         TriggerServerEvent('hud:server:GainStress', math.random(1, 3))
                     end
-                end                                                                     --Change Add
+                end
             end
         end
         Wait(10000)
